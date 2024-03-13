@@ -1,0 +1,48 @@
+#include <stdio.h>
+
+#define TAMANHO_VETOR 20
+
+int main() {
+    int vetor[TAMANHO_VETOR];
+    int par[TAMANHO_VETOR];
+    int impar[TAMANHO_VETOR];
+    int contadorPar = 0;
+    int contadorImpar = 0;
+
+    // Leitura dos números e armazenamento nos vetores correspondentes
+    printf("Digite os 20 números inteiros:\n");
+    for (int i = 0; i < TAMANHO_VETOR; i++) {
+        scanf("%d", &vetor[i]);
+
+        if (vetor[i] % 2 == 0) {
+            par[contadorPar] = vetor[i];
+            contadorPar++;
+        } else {
+            impar[contadorImpar] = vetor[i];
+            contadorImpar++;
+        }
+    }
+
+    // Impressão do vetor original
+    printf("Vetor original: ");
+    for (int i = 0; i < TAMANHO_VETOR; i++) {
+        printf("%d ", vetor[i]);
+    }
+    printf("\n");
+
+    // Impressão do vetor de números pares
+    printf("Vetor de números pares: ");
+    for (int i = 0; i < contadorPar; i++) {
+        printf("%d ", par[i]);
+    }
+    printf("\n");
+
+    // Impressão do vetor de números ímpares
+    printf("Vetor de números ímpares: ");
+    for (int i = 0; i < contadorImpar; i++) {
+        printf("%d ", impar[i]);
+    }
+    printf("\n");
+
+    return 0;
+}
