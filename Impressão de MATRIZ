@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+void imprimirMatriz(int N) {
+    int i, j;
+
+    for (i = 0; i < N; i++) {
+        for (j = 0; j < N; j++) {
+            if (i == j) {
+                printf("1");
+            } else if (i <= j) {
+                printf("2");
+            } else {
+                printf("3");
+            }
+
+            if (j < N - 1) {
+                printf(" ");
+            }
+        }
+        printf("\n");
+    }
+    printf("\n");
+}
+
+int main() {
+    int N;
+
+    while (scanf("%d", &N) != EOF) {
+        imprimirMatriz(N);
+    }
+
+    return 0;
+}
